@@ -1,1 +1,0 @@
-/Users/chriskelsey/.vimrc
