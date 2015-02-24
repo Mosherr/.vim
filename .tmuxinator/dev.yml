@@ -1,7 +1,7 @@
-# ~/.tmuxinator/vms2.yml
+# ~/.tmuxinator/dev.yml
 
-name: vms2
-root: ~/Sites/vms2
+name: dev
+root: ~/Sites
 
 # Optional tmux socket
 # socket_name: foo
@@ -19,9 +19,9 @@ root: ~/Sites/vms2
 # tmux_command: byobu
 
 windows:
-    - editor:
-        layout: layout 35cc, 204x51, 0, 0{165x51, 0, 0, 1, 38x51, 166, 0[38x25, 166, 0, 2, 38x25, 166, 26, 3]}
-        panes:
-            - vim
-            - cd ~/Sites
-            - cd ~/Sites
+        - editor:
+                layout: main-vertical
+                panes:
+                        - vim
+                        - cd ~/Sites
+                        - cd ~/Sites
