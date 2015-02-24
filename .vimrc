@@ -61,3 +61,13 @@ nnoremap <silent> {Down-Mapping} :TmuxNavigateDown<cr>
 nnoremap <silent> {Up-Mapping} :TmuxNavigateUp<cr>
 nnoremap <silent> {Right-Mapping} :TmuxNavigateRight<cr>
 nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
+
+let g:netrw_liststyle=3
+
+call pathogen#infect()
+call pathogen#helptags()
+
+augroup reload_vimrc " {
+		autocmd!
+		autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }

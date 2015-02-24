@@ -1,7 +1,7 @@
 # ~/.tmuxinator/vms2.yml
 
 name: vms2
-root: ~/Sites//vms2
+root: ~/Sites/vms2
 
 # Optional tmux socket
 # socket_name: foo
@@ -19,8 +19,7 @@ root: ~/Sites//vms2
 # tmux_command: byobu
 
 windows:
-  - editor:
-      layout: main-vertical
-      panes:
-        - vim
-  - logs: tail -f api/logs/logs.log
+    - editor:
+        layout: main-vertical
+        panes:
+                send-keys: :NERDTree ~/Sites/vms2
