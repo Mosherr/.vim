@@ -5,13 +5,15 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-surround'
+Plugin 'scrooloose/syntastic'
+Plugin 'pangloss/vim-javascript'
 
 set number        " Show line numbers
-syntax enable     " Use syntax highlighting
-set background=dark
-let g:solarized_termcolors = 256
-colorscheme solarized
+" syntax enable     " Use syntax highlighting
+" set background=dark
+" let g:solarized_termcolors = 256
+" colorscheme solarized
 
 call vundle#end()
 filetype plugin indent on
@@ -26,7 +28,7 @@ inoremap jk <ESC>
 let mapleader = ","
 
 
-set tabstop=4
+set tabstop=2
 set number
 filetype indent on
 set lazyredraw
@@ -71,3 +73,9 @@ augroup reload_vimrc " {
 		autocmd!
 		autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
+
+" :set laststatus=2
+" %{fugitive#statusline()}
+
+
+
