@@ -77,5 +77,6 @@ augroup END " }
 " :set laststatus=2
 " %{fugitive#statusline()}
 
-
+autocmd BufWinLeave *.* mkview!
+autocmd BufWinEnter *.* silent loadview
 
