@@ -9,7 +9,7 @@ Bundle 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'pangloss/vim-javascript'
 
-set number        " Show line numbers
+"set number        " Show line numbers
 " syntax enable     " Use syntax highlighting
 " set background=dark
 " let g:solarized_termcolors = 256
@@ -27,8 +27,8 @@ filetype off " required
 inoremap jk <ESC>
 let mapleader = ","
 
-
-set tabstop=2
+set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+"set tabstop=2
 set number
 filetype indent on
 set lazyredraw
@@ -40,7 +40,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 
 set encoding=utf-8 "
-" setlocal spell spelllang=en_us
+setlocal spell spelllang=en_us
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -65,6 +65,7 @@ nnoremap <silent> {Right-Mapping} :TmuxNavigateRight<cr>
 nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 
 let g:netrw_liststyle=3
+let NERDTreeShowHidden=1
 
 call pathogen#infect()
 call pathogen#helptags()

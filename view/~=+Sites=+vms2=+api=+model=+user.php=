@@ -33,7 +33,7 @@ setlocal dictionary=
 setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
-setlocal expandtab
+setlocal noexpandtab
 if &filetype != 'php'
 setlocal filetype=php
 endif
@@ -41,7 +41,7 @@ setlocal foldcolumn=0
 setlocal foldenable
 setlocal foldexpr=0
 setlocal foldignore=#
-setlocal foldlevel=2
+setlocal foldlevel=0
 setlocal foldmarker={{{,}}}
 setlocal foldmethod=manual
 setlocal foldminlines=1
@@ -97,7 +97,7 @@ setlocal synmaxcol=3000
 if &syntax != 'php'
 setlocal syntax=php
 endif
-setlocal tabstop=2
+setlocal tabstop=4
 setlocal tags=
 setlocal textwidth=0
 setlocal thesaurus=
@@ -108,51 +108,45 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-3,26fold
-29,36fold
-39,57fold
-61,67fold
-70,130fold
-133,201fold
-212,212fold
-204,217fold
-220,267fold
-270,395fold
-398,470fold
-473,497fold
-500,527fold
-3
-normal! zc
-29
-normal! zc
-39
-normal! zc
-61
-normal! zc
-70
-normal! zc
-204
+2,51fold
+54,91fold
+92,97fold
+100,130fold
+131,138fold
+141,142fold
+143,151fold
+154,155fold
+156,165fold
+168,180fold
+181,188fold
+191,200fold
+201,209fold
+212,221fold
+224,229fold
+230,238fold
+241,242fold
+251,278fold
+281,293fold
+296,300fold
+303,307fold
+310,314fold
+316,316fold
+317,321fold
+324,333fold
+336,377fold
+380,430fold
+433,459fold
+462,492fold
+224
 normal! zo
-212
-normal! zc
-204
-normal! zc
-220
-normal! zc
-270
-normal! zc
-398
-normal! zc
-473
-normal! zc
-500
-normal! zc
-let s:l = 201 - ((58 * winheight(0) + 30) / 60)
+336
+normal! zo
+let s:l = 363 - ((62 * winheight(0) + 30) / 60)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-201
-normal! 03|
+363
+normal! 08|
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

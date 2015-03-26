@@ -90,14 +90,14 @@ setlocal norelativenumber
 setlocal norightleft
 setlocal rightleftcmd=search
 setlocal noscrollbind
-setlocal shiftwidth=8
+setlocal shiftwidth=4
 setlocal noshortname
 setlocal nosmartindent
-setlocal softtabstop=0
-setlocal nospell
+setlocal softtabstop=4
+setlocal spell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
-setlocal spelllang=en
+setlocal spelllang=en_us
 setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
@@ -105,7 +105,7 @@ setlocal synmaxcol=3000
 if &syntax != 'vim'
 setlocal syntax=vim
 endif
-setlocal tabstop=2
+setlocal tabstop=4
 setlocal tags=
 setlocal textwidth=78
 setlocal thesaurus=
@@ -116,12 +116,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 80 - ((59 * winheight(0) + 31) / 62)
+let s:l = 68 - ((47 * winheight(0) + 31) / 62)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-80
-normal! 0
+68
+normal! 024|
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

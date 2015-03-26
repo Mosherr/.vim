@@ -1,12 +1,8 @@
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
-onoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
-nnoremap <buffer> <silent> [[ ?\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)?:nohls
-onoremap <buffer> <silent> ]] /\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)/:nohls
-nnoremap <buffer> <silent> ]] /\(.*\%#\)\@!\_^\s*\zs\(\(abstract\s\+\|final\s\+\|private\s\+\|protected\s\+\|public\s\+\|static\s\+\)*function\|\(abstract\s\+\|final\s\+\)*class\|interface\)/:nohls
 setlocal keymap=
 setlocal noarabic
-setlocal noautoindent
+setlocal autoindent
 setlocal balloonexpr=
 setlocal nobinary
 setlocal bufhidden=
@@ -17,8 +13,8 @@ setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,:#
-setlocal commentstring=/*%s*/
+setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
+setlocal commentstring=//%s
 setlocal complete=.,w,b,u,t
 setlocal concealcursor=
 setlocal conceallevel=0
@@ -33,30 +29,30 @@ setlocal dictionary=
 setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
-setlocal expandtab
-if &filetype != 'php'
-setlocal filetype=php
+setlocal noexpandtab
+if &filetype != 'javascript'
+setlocal filetype=javascript
 endif
 setlocal foldcolumn=0
 setlocal foldenable
 setlocal foldexpr=0
 setlocal foldignore=#
-setlocal foldlevel=2
+setlocal foldlevel=0
 setlocal foldmarker={{{,}}}
 setlocal foldmethod=manual
 setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=jqrowcb
+setlocal formatexpr=Fixedgq(v:lnum,v:count)
+setlocal formatoptions=jcroql
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal grepprg=
 setlocal iminsert=2
 setlocal imsearch=2
-setlocal include=\\(require\\|include\\)\\(_once\\)\\?
+setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=GetPhpIndent()
-setlocal indentkeys=0{,0},0),:,!^F,o,O,e,*<Return>,=?>,=<?,=*/
+setlocal indentexpr=GetJavascriptIndent()
+setlocal indentkeys=0{,0},0),0],0,,!^F,o,O,e
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,192-255,$
 setlocal keywordprg=
@@ -66,13 +62,13 @@ setlocal lispwords=
 setlocal nolist
 setlocal nomacmeta
 setlocal makeprg=
-setlocal matchpairs=(:),{:},[:],<:>
+setlocal matchpairs=(:),{:},[:]
 setlocal modeline
 setlocal modifiable
 setlocal nrformats=hex
 setlocal number
 setlocal numberwidth=4
-setlocal omnifunc=phpcomplete#CompletePHP
+setlocal omnifunc=javascriptcomplete#CompleteJS
 setlocal path=
 setlocal nopreserveindent
 setlocal nopreviewwindow
@@ -94,10 +90,10 @@ setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
-if &syntax != 'php'
-setlocal syntax=php
+if &syntax != 'javascript'
+setlocal syntax=javascript
 endif
-setlocal tabstop=2
+setlocal tabstop=4
 setlocal tags=
 setlocal textwidth=0
 setlocal thesaurus=
@@ -108,51 +104,35 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-3,26fold
-29,36fold
-39,57fold
-61,67fold
-70,130fold
-133,201fold
-212,212fold
-204,217fold
-220,267fold
-270,395fold
-398,470fold
-473,497fold
-500,527fold
+3,10fold
+12,37fold
+39,52fold
+54,60fold
+62,71fold
+73,96fold
+98,105fold
+107,124fold
+127,146fold
 3
-normal! zc
-29
-normal! zc
-39
-normal! zc
-61
-normal! zc
-70
-normal! zc
-204
 normal! zo
-212
-normal! zc
-204
-normal! zc
-220
-normal! zc
-270
-normal! zc
-398
-normal! zc
-473
-normal! zc
-500
-normal! zc
-let s:l = 201 - ((58 * winheight(0) + 30) / 60)
+39
+normal! zo
+54
+normal! zo
+62
+normal! zo
+73
+normal! zo
+107
+normal! zo
+127
+normal! zo
+let s:l = 53 - ((52 * winheight(0) + 30) / 60)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-201
-normal! 03|
+53
+normal! 012|
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :
