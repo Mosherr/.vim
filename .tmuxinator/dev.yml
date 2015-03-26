@@ -25,3 +25,4 @@ windows:
                         - vim
                         - cd ~/Sites
                         - cd ~/Sites
+                        - cd ~/Sites

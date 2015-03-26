@@ -41,3 +41,4 @@
 	* [NerdTree](http://www.cheatography.com/storage/thumb/stepk_vim-nerdtree.600.jpg)
 	* (These are also in a folder called cheatsheet inside .vim)
 	* [TextExpander, among other things, is awesome for shortcuts.](http://smilesoftware.com/TextExpander/index.html)
+
