@@ -35,9 +35,9 @@
   * Hold down the option key to select text to copy. Only really works nicely on one line(copies garbage on multi-lines)
   * Good cheat sheet images for wallpapers:  
     * [VIM](https://cdn.shopify.com/s/files/1/0165/4168/files/digital-preview-letter.png)
-	* [VIM}(http://linux.wxs.ro/wp-content/uploads/2011/09/vim-cheatsheet.png)
+	* [VIM](http://linux.wxs.ro/wp-content/uploads/2011/09/vim-cheatsheet.png)
 	* [TMUX](http://www.clintoncurry.net/wp-content/uploads/2013/11/tmux-cheatsheet.png)
     * [TMUX](http://tim.gremalm.se/wp-content/uploads/2013/10/Cheat-Sheet-tmux.png)
 	* [NerdTree](http://www.cheatography.com/storage/thumb/stepk_vim-nerdtree.600.jpg)
 	* (These are also in a folder called cheatsheet inside .vim)
-	* (TextExpander, among other things, is awesome for shortcuts.)[http://smilesoftware.com/TextExpander/index.html]
+	* [TextExpander, among other things, is awesome for shortcuts.](http://smilesoftware.com/TextExpander/index.html)
