@@ -27,6 +27,10 @@ filetype off " required
 inoremap jk <ESC>
 let mapleader = ","
 
+"set mouse control on all modes
+set mouse=a
+
+"set tabs n such
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 "set tabstop=2
 set number

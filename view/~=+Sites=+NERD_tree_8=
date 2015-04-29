@@ -48,7 +48,7 @@ setlocal autoindent
 setlocal balloonexpr=
 setlocal nobinary
 setlocal bufhidden=hide
-setlocal buflisted
+setlocal nobuflisted
 setlocal buftype=nofile
 setlocal nocindent
 setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
@@ -145,11 +145,11 @@ setlocal nowinfixheight
 setlocal winfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
-let s:l = 1 - ((0 * winheight(0) + 10) / 21)
+let s:l = 4 - ((3 * winheight(0) + 30) / 60)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+4
 normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

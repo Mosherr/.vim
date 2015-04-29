@@ -23,6 +23,6 @@ windows:
                 layout: main-vertical
                 panes:
                         - vim
-                        - cd ~/Sites
-                        - cd ~/Sites
-                        - cd ~/Sites
+                        - cd ~/Sites/ && zsh
+                        - cd ~/Sites/ && zsh
+                        - cd ~/Sites/ && zsh
