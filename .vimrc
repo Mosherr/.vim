@@ -1,13 +1,13 @@
 set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"filetype off
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'tpope/vim-surround'
-Plugin 'scrooloose/syntastic'
-Plugin 'pangloss/vim-javascript'
+"Plugin 'gmarik/Vundle.vim'
+"Bundle 'christoomey/vim-tmux-navigator'
+"Bundle 'tpope/vim-surround'
+"Plugin 'scrooloose/syntastic'
+"Plugin 'pangloss/vim-javascript'
 
 "set number        " Show line numbers
 " syntax enable     " Use syntax highlighting
@@ -15,7 +15,7 @@ Plugin 'pangloss/vim-javascript'
 " let g:solarized_termcolors = 256
 " colorscheme solarized
 
-call vundle#end()
+"call vundle#end()
 filetype plugin indent on
 
 set nocompatible " be iMproved, required
