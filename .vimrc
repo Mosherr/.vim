@@ -1,3 +1,13 @@
+" brew install mercurial
+" brew install vim
+" cd ~ && mkdir ~/.vim && touch ~/.vim/.vimrc && ln -s ~/.vim/.vimrc
+" git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" vim +PluginInstall +qall
+" brew install tmux
+" sudo gem install tmuxinator
+" brew install ack
+" brew install ag
+
 set nocompatible
 "filetype off
 "set rtp+=~/.vim/bundle/Vundle.vim
