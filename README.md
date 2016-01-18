@@ -3,7 +3,7 @@
 ###Prerequisites
 
   * $ brew install tmux _(tmux)_
-  * $ brew install macvim --override-system-vim
+  * $ brew install macvim --with-override-system-vim
   * $ gem install tmuxinator _(tmuxinator)_
   * [Nerdtree it up](https://github.com/scrooloose/nerdtree)
   * [Install iTerm](http://www.iterm2.com/downloads/stable/iTerm2_v2_0.zip)
